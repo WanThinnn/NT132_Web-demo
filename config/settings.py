@@ -64,14 +64,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # Thay đổi engine thành MySQL
+        'NAME': 'nt132_database',          # Thay bằng tên database của bạn
+        'USER': 'root',                        # Tài khoản MySQL
+        'PASSWORD': '241203',                  # Mật khẩu MySQL
+        'HOST': 'localhost',                   # Máy chủ MySQL (localhost)
+        'PORT': '3306',                        # Cổng MySQL (mặc định là 3306)
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
